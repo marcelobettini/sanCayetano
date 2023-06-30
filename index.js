@@ -40,6 +40,14 @@ function renderTable() {
 
     const statusCell = document.createElement("td");
     statusCell.textContent = todo.isCompleted ? "completed" : "pending";
+    if (todo.isCompleted) {
+      statusCell.classList.add("completed");
+      statusCell.classList.remove("pending");
+    } else {
+      statusCell.classList.add("pending");
+      statusCell.classList.remove("completed");
+    }
+
     row.appendChild(statusCell);
     tableBody.appendChild(row);
   });
