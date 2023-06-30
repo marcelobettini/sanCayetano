@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>To-Do List</title>
+</head>
+
+<body>
+  <h1>Awesome To-Do List</h1>
+  <form id="addTodoForm" action="">
+    <label for="todoDescription">Enter a to-do</label>
+    <input id="todoDescription" type="text" required>
+    <button type="submit">Add</button>
+  </form>
+  <table id="todoTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <dialog id="todoModal">
+    <form id="editTodoForm" action="">
+      <p>ID:<span id="todoId"></span></p>
+      <label for="todoDescriptionModal">Description:
+
+        <input type="text" id="todoDescriptionModal">
+      </label>
+      <p>Status:<span id="statusText"></span></p>
+      <fieldset>
+        <button type="button" id="deleteButton">Delete</button>
+        <button type="submit" id="updateButton">Update</button>
+        <button type="button" id="statusButton">Toggle Status</button>
+        <button type="button" id="cancelButton">Cancel</button>
+      </fieldset>
+    </form>
+  </dialog>
+
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
